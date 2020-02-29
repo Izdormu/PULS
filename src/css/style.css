@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+@font-face {
+  font-family: 'Museo Sans 100 Thin';
+  src: url("../../fonts/MuseoSansCyrl-100.eot");
+  src: url("../../fonts/MuseoSansCyrl-100.eot?#iefix") format("embedded-opentype"), url("../../fonts/MuseoSansCyrl-100.woff") format("woff"), url("../../fonts/MuseoSansCyrl-100.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+html {
+  font-family: 'Museo Sans 100 Thin', sans-serif; }
