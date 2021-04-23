@@ -64,5 +64,63 @@ const slider = tns({
           $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
           $('.overlay, #order').fadeIn('slow');
         })
+      });
+    
+    
+    function validateForms(form){
+      $(form).validate({
+        rules: {
+          name: "required",
+          phone: "required",
+          email: {
+           required: true,
+            email: true
+          }
+        },
+        messages: {
+          name: "Пожалуйста, введите свое имя",
+          phone: "Пожалуйста, введите cвой номер",
+           email: {
+            required:"Пожалуйста, введите свою почту",
+            email:"Неправильно введен адрес посты"
+            }
+        }
+      });
+    };
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form')
+    
+    $('form').submit(function(e) {
+      e.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+      }).done(function() {
+        $(this).find("input").val("");
+        $('#consultation,#order').fadeOut();
+        $(".overlay,#thanks").fadeIn("slow");
+        $("form").trigger("reset");
+
+      });
+      return false;
     });
+
+    //Smooth scroll and page up
+    $(window).scroll(function(){
+      if($(this).scrollTop()> 1600) {
+        $('.pageup').fadeIn();
+      } else{
+        $('.pageup').fadeOut();
+      } 
+    });
+    $(function(){
+      $("a[href=#up]").click(function(){
+              var _href = $(this).attr("href");
+              $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+              return false;
+      });
+});
+new WOW().init();
 });

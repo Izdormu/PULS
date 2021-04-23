@@ -10,10 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
     <!-- <link rel="stylesheet" href="css/slick.css"> -->
     <link rel="stylesheet" href="css/style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     
 </head>
 <body>
-    <section class="promo"> 
+    <section class="promo" id="up"> 
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo"><img src="icons/icon.png" alt=""></a>
@@ -46,7 +50,7 @@
                 </div>
                 <button data-modal="consultation" class="button button_main">заказать кОНСУЛЬТАЦИЮ</button> 
                 <div class="promo__link">или
-                    <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a> </div>
+                    <a href="#catalog">ПЕРЕЙТИ В КАТАЛОГ</a> </div>
             </div>
             
         </div>
@@ -62,7 +66,7 @@
                         так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</div>
                 </div>
                 <div class="advantages__item">
-                    <img src="icons/heart@1X.png" alt="">
+                    <img src="icons/heart@1X.png" alt="heart" class="advantages__icon advantages__icon_animated">
                     <div class="advantages__subtitle">Заботимся о здоровье</div>
                     <div class="advantages__descr">Мы работаем для того, 
                         чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!</div>
@@ -83,7 +87,7 @@
                 по подбору пульсометра</h2>
             <div class="consultation__descr">Просто заполните форму заявки <br>
                 и мы перезвоним вам в течении 10 минут</div>
-            <form class="feed-form" action="#">
+            <form class="feed-form" id="consultation-form" action="#">
                 <input name="name" type="text" required placeholder="Ваше имя">
                 <input name="phone" type="number" required placeholder="Ваш телефон">
                 <input name="email" type="email" required placeholder="Ваш E-mail">
@@ -91,7 +95,7 @@
             </form>
         </div>
     </section>
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div><img src="img/4b6197c393e2d3fdb5980c4d5d8f2856@1X.png" alt="">
@@ -104,8 +108,8 @@
                 <button type="button" class="prev"><img src="icons/left.png"></button>
                 <button type="button" class="next"><img src="icons/right.png"></button>
         </div>                   
-    </section>
-    <section class="catalog">
+    </div>
+    <section class="catalog" id="catalog">
         <div class="container">
             <h2 class="title">Каталог пульсометров</h2>
             <ul class="catalog__tabs">
@@ -310,7 +314,7 @@
     <section class="feed">
         <div class="container">
             <h2 class="title">отзывы клиентов</h2>
-            <div class="feed__item">
+            <div class="feed__item animate__animated animate__fadeInUp wow data-wow-duration='2s' data-wow-delay='1s'">
                 <img src="img/irina.png" alt="#" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Ирина Иванченко</div>
@@ -323,7 +327,7 @@
                         Спасибо, RunSmart!</div>
                 </div>
             </div>
-            <div class="feed__item">
+            <div class="feed__item animate__animated animate__fadeInUp wow data-wow-duration='2s' data-wow-delay='1s'">
                 <img src="img/ivan.png" alt="#" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Иван Сёмочкин</div>
@@ -334,7 +338,7 @@
                         С ними подготовился к своему первому полумарафону! Спасибо!!!</div>
                 </div>
             </div>
-            <div class="feed__item">
+            <div class="feed__item  animate__animated animate__fadeInUp wow data-wow-duration='2s' data-wow-delay='1s'">
                 <img src="img/yulia.png" alt="#" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Юлия Дашкина
@@ -394,14 +398,18 @@
                 в ближайшее время!</div>
 
         </div>
-
-        
     </div>
-     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <a  href="#up" class="pageup"><img src="img/up.svg" alt=""></a>
+    
+    <script  src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script  src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <!-- <script src="js/slick.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
+    
+    <script src="js/jquery.validate.min.js"></script>
     
 </body>
 </html>
