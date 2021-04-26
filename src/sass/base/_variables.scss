@@ -3,24 +3,7 @@
     margin: 0;
     padding: 0;
 }
-
-@font-face {
-    font-family: 'Museo Sans 100 Thin';
-    src: url('../../fonts/MuseoSansCyrl-100.eot');
-    src: url('../../fonts/MuseoSansCyrl-100.eot?#iefix') format('embedded-opentype'),
-    url('../../fonts/MuseoSansCyrl-100.woff') format('woff'),
-    url('../../fonts/MuseoSansCyrl-100.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    }
-    html{
-        font-family: 'Museo Sans 100 Thin', sans-serif;
-    }
     div{
         color: rgb(0, 145, 70);
     }
-    .promo{
-        min-height:650px;
-        padding: 21px 0 93px 0;
-        background: url(../../img/background/bg1.jpg) center (center/cover) no-repeat;
-    }
+    
